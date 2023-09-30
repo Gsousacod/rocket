@@ -10,8 +10,7 @@
     background: #01070a;
     overflow: hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
+   
 }
 .scene i{
     position: absolute;
@@ -20,7 +19,10 @@
     animation: animateStar linear infinite;
 }
 .scene .rocket{
-    position: relative;
+    bottom: 150px;
+    left: 150px;
+    transform: rotate(15deg);
+    position: absolute;
     animation: animate 0.2s ease infinite;
 }
 @keyframes animateStar{
@@ -41,6 +43,7 @@
 }
 
 .scene .rocket::before{
+    transform: rotate(60deg);
     content: "";
     position: absolute;
     bottom: -200px;
@@ -51,6 +54,7 @@
     background: linear-gradient(#00d0ff,transparent);
 }
 .scene .rocket::after{
+    transform: rotate(60deg);
     content: "";
     position: absolute;
     bottom: -200px;
